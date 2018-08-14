@@ -1,0 +1,3 @@
+[submodule "roguezombie.windows_visualcpp17_x86/roguezombie"]
+	path = roguezombie.windows_visualcpp17_x86/roguezombie
+	url = git@bitbucket.org:md5madman/roguezombie.git

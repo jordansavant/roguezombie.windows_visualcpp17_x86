@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{0218F3B9-D1E4-4DEB-9055-46A6CF8F73E6}</ProjectGuid>
+    <RootNamespace>roguezombiewindowsvisualcpp17x86</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\md5ma\source\repos\roguezombie.windows_visualcpp17_x86\SFML-2.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\md5ma\source\repos\roguezombie.windows_visualcpp17_x86\SFML-2.5.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;sfml-audio-d.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>XCOPY "$(SolutionDir)roguezombie.windows_visualcpp17_x86\roguezombie\content" "$(TargetDir)content\" /S /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="roguezombie\bitengine\Audio.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Audio\MusicManager.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Audio\SoundManager.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Game.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Game\FrameTimer.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Game\Game.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Game\GameComponent.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Game\GameTimer.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Game\State.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Game\StateStack.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Game\VideoGame.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Graphics.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Graphics\Animation.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Graphics\Camera.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Graphics\ColorMixer.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Graphics\Sprite.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Graphics\SpriteLoader.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Graphics\Vertex3.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Graphics\Vertex3Array.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Graphics\VertexHelper.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Graphics\VertexMap.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Checkbox.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Container.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Draggable.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Easing.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Effect.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Element.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\FadeEffect.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Hoverable.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Label.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Mouse.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\MoveEffect.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Picture.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\ScaleEffect.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Gui\Slider.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Input.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Input\InputBinding.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Input\InputBindingVector.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Input\InputManager.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Input\XinputGamepad.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Intelligence.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Intelligence\Astar.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Intelligence\AstarNode.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Intelligence\FloodFill.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Intelligence\Shadowcaster.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Intelligence\Spiral.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Math.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Math\Math.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Math\mtrand.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Math\Random.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Math\RectangleMath.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Math\VectorMath.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Network.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Network\ClientPacket.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Network\ClientServerState.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Network\NetworkHelper.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Network\RemoteClient.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Network\Server.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Network\ServerPacket.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Structures.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Structures\Event.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Structures\Exception.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Structures\NonCopyable.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Structures\Pool.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Structures\QuadTree.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Structures\QuadTreeObject.hpp" />
+    <ClInclude Include="roguezombie\bitengine\System.hpp" />
+    <ClInclude Include="roguezombie\bitengine\System\FileSystem.hpp" />
+    <ClInclude Include="roguezombie\bitengine\System\Output.hpp" />
+    <ClInclude Include="roguezombie\bitengine\System\PlatformDefinitions.hpp" />
+    <ClInclude Include="roguezombie\bitengine\System\String.hpp" />
+    <ClInclude Include="roguezombie\bitengine\System\tinyxml2.h" />
+    <ClInclude Include="roguezombie\client\BodyClient.hpp" />
+    <ClInclude Include="roguezombie\client\CharacterClient.hpp" />
+    <ClInclude Include="roguezombie\client\CharacterSprite.hpp" />
+    <ClInclude Include="roguezombie\client\hud\ActionBar.hpp" />
+    <ClInclude Include="roguezombie\client\hud\ActionBarSlot.hpp" />
+    <ClInclude Include="roguezombie\client\hud\Console.hpp" />
+    <ClInclude Include="roguezombie\client\hud\DialogMenu.hpp" />
+    <ClInclude Include="roguezombie\client\hud\Frame.hpp" />
+    <ClInclude Include="roguezombie\client\hud\Hud.hpp" />
+    <ClInclude Include="roguezombie\client\hud\HudElement.hpp" />
+    <ClInclude Include="roguezombie\client\hud\HudMenu.hpp" />
+    <ClInclude Include="roguezombie\client\hud\InteractionMenu.hpp" />
+    <ClInclude Include="roguezombie\client\hud\Inventory.hpp" />
+    <ClInclude Include="roguezombie\client\hud\InventoryEquipmentSlot.hpp" />
+    <ClInclude Include="roguezombie\client\hud\InventoryIcon.hpp" />
+    <ClInclude Include="roguezombie\client\hud\InventoryItemLabel.hpp" />
+    <ClInclude Include="roguezombie\client\hud\InventoryLootSlot.hpp" />
+    <ClInclude Include="roguezombie\client\hud\InventoryPositionSlot.hpp" />
+    <ClInclude Include="roguezombie\client\hud\Journal.hpp" />
+    <ClInclude Include="roguezombie\client\hud\LootMenu.hpp" />
+    <ClInclude Include="roguezombie\client\hud\Minimap.hpp" />
+    <ClInclude Include="roguezombie\client\hud\Options.hpp" />
+    <ClInclude Include="roguezombie\client\hud\OptionsBar.hpp" />
+    <ClInclude Include="roguezombie\client\hud\StatBubble.hpp" />
+    <ClInclude Include="roguezombie\client\hud\Tooltip.hpp" />
+    <ClInclude Include="roguezombie\client\hud\TurnQueue.hpp" />
+    <ClInclude Include="roguezombie\client\items\ItemClient.hpp" />
+    <ClInclude Include="roguezombie\client\LevelClient.hpp" />
+    <ClInclude Include="roguezombie\client\LevelClientRunner.hpp" />
+    <ClInclude Include="roguezombie\client\menus\ErrorMenu.hpp" />
+    <ClInclude Include="roguezombie\client\menus\JoiningMenu.hpp" />
+    <ClInclude Include="roguezombie\client\menus\StartMainMenu.hpp" />
+    <ClInclude Include="roguezombie\client\menus\StateMenu.hpp" />
+    <ClInclude Include="roguezombie\client\mission\MissionClient.hpp" />
+    <ClInclude Include="roguezombie\client\MoveMarker.hpp" />
+    <ClInclude Include="roguezombie\client\RogueZombieGame.hpp" />
+    <ClInclude Include="roguezombie\client\RZConfig.hpp" />
+    <ClInclude Include="roguezombie\client\StateGameError.hpp" />
+    <ClInclude Include="roguezombie\client\StateGamePlay.hpp" />
+    <ClInclude Include="roguezombie\client\StateGameStart.hpp" />
+    <ClInclude Include="roguezombie\client\StructureClient.hpp" />
+    <ClInclude Include="roguezombie\client\structures\ChestClient.hpp" />
+    <ClInclude Include="roguezombie\client\structures\DoorClient.hpp" />
+    <ClInclude Include="roguezombie\client\structures\WallClient.hpp" />
+    <ClInclude Include="roguezombie\client\TileClient.hpp" />
+    <ClInclude Include="roguezombie\ResourcePath.h" />
+    <ClInclude Include="roguezombie\server\AiRoutines.hpp" />
+    <ClInclude Include="roguezombie\server\Body.hpp" />
+    <ClInclude Include="roguezombie\server\Character.hpp" />
+    <ClInclude Include="roguezombie\server\characters\Hunter.hpp" />
+    <ClInclude Include="roguezombie\server\characters\Ogre.hpp" />
+    <ClInclude Include="roguezombie\server\characters\Zombie.hpp" />
+    <ClInclude Include="roguezombie\server\ClientRequest.hpp" />
+    <ClInclude Include="roguezombie\server\Command.hpp" />
+    <ClInclude Include="roguezombie\server\dialog\Dialog.hpp" />
+    <ClInclude Include="roguezombie\server\dialog\DialogEntry.hpp" />
+    <ClInclude Include="roguezombie\server\dialog\DialogNode.hpp" />
+    <ClInclude Include="roguezombie\server\dialog\DialogResponse.hpp" />
+    <ClInclude Include="roguezombie\server\GameplayServer.hpp" />
+    <ClInclude Include="roguezombie\server\Interaction.hpp" />
+    <ClInclude Include="roguezombie\server\items\Item.hpp" />
+    <ClInclude Include="roguezombie\server\items\ItemCategory.hpp" />
+    <ClInclude Include="roguezombie\server\Level.hpp" />
+    <ClInclude Include="roguezombie\server\LevelLoader.hpp" />
+    <ClInclude Include="roguezombie\server\LevelRunnable.hpp" />
+    <ClInclude Include="roguezombie\server\LevelRunner.hpp" />
+    <ClInclude Include="roguezombie\server\levels\Interior.hpp" />
+    <ClInclude Include="roguezombie\server\Light.hpp" />
+    <ClInclude Include="roguezombie\server\lights\flare.hpp" />
+    <ClInclude Include="roguezombie\server\mission\JournalEntry.hpp" />
+    <ClInclude Include="roguezombie\server\mission\LogicalType.hpp" />
+    <ClInclude Include="roguezombie\server\mission\Mission.hpp" />
+    <ClInclude Include="roguezombie\server\Player.hpp" />
+    <ClInclude Include="roguezombie\server\RogueZombieServer.hpp" />
+    <ClInclude Include="roguezombie\server\RpgSystem.hpp" />
+    <ClInclude Include="roguezombie\server\ServerEvent.hpp" />
+    <ClInclude Include="roguezombie\server\StateServerPlay.hpp" />
+    <ClInclude Include="roguezombie\server\Structure.hpp" />
+    <ClInclude Include="roguezombie\server\structures\Chest.hpp" />
+    <ClInclude Include="roguezombie\server\structures\Door.hpp" />
+    <ClInclude Include="roguezombie\server\structures\Wall.hpp" />
+    <ClInclude Include="roguezombie\server\Tile.hpp" />
+    <ClInclude Include="roguezombie\xogeni\LevelGenerator\Cell.hpp" />
+    <ClInclude Include="roguezombie\xogeni\LevelGenerator\CellMap.hpp" />
+    <ClInclude Include="roguezombie\xogeni\LevelGenerator\Entrance.hpp" />
+    <ClInclude Include="roguezombie\xogeni\LevelGenerator\Exit.hpp" />
+    <ClInclude Include="roguezombie\xogeni\LevelGenerator\LevelGenerator.hpp" />
+    <ClInclude Include="roguezombie\xogeni\LevelGenerator\Room.hpp" />
+    <ClInclude Include="roguezombie\xogeni\LevelGenerator\RoomDoor.hpp" />
+    <ClInclude Include="roguezombie\xogeni\XoGeniGame.hpp" />
+    <ClInclude Include="roguezombie\xogeni\XoGeniStateStart.hpp" />
+    <ClInclude Include="roguezombie\xogeni\XoLevelRenderer.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="roguezombie\bitengine\Audio\MusicManager.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Audio\SoundManager.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Game\FrameTimer.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Game\Game.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Game\GameComponent.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Game\GameTimer.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Game\State.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Game\StateStack.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Game\VideoGame.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Graphics\Animation.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Graphics\Camera.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Graphics\ColorMixer.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Graphics\Sprite.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Graphics\SpriteLoader.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Graphics\Vertex3.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Graphics\Vertex3Array.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Graphics\VertexHelper.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Graphics\VertexMap.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Checkbox.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Container.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Draggable.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Easing.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Effect.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Element.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\FadeEffect.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Hoverable.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Label.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Mouse.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\MoveEffect.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Picture.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\ScaleEffect.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Gui\Slider.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Input\InputBinding.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Input\InputBindingVector.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Input\InputManager.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Input\XinputGamepad.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Intelligence\Astar.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Intelligence\AstarNode.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Intelligence\FloodFill.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Intelligence\Shadowcaster.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Intelligence\Spiral.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Math\Math.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Math\mtrand.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Math\Random.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Math\RectangleMath.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Math\VectorMath.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Network\ClientPacket.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Network\ClientServerState.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Network\RemoteClient.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Network\Server.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Network\ServerPacket.cpp" />
+    <ClCompile Include="roguezombie\bitengine\System\FileSystem.cpp" />
+    <ClCompile Include="roguezombie\bitengine\System\Output.cpp" />
+    <ClCompile Include="roguezombie\bitengine\System\String.cpp" />
+    <ClCompile Include="roguezombie\bitengine\System\tinyxml2.cpp" />
+    <ClCompile Include="roguezombie\client\BodyClient.cpp" />
+    <ClCompile Include="roguezombie\client\CharacterClient.cpp" />
+    <ClCompile Include="roguezombie\client\CharacterSprite.cpp" />
+    <ClCompile Include="roguezombie\client\hud\ActionBar.cpp" />
+    <ClCompile Include="roguezombie\client\hud\ActionBarSlot.cpp" />
+    <ClCompile Include="roguezombie\client\hud\Console.cpp" />
+    <ClCompile Include="roguezombie\client\hud\DialogMenu.cpp" />
+    <ClCompile Include="roguezombie\client\hud\Frame.cpp" />
+    <ClCompile Include="roguezombie\client\hud\Hud.cpp" />
+    <ClCompile Include="roguezombie\client\hud\HudElement.cpp" />
+    <ClCompile Include="roguezombie\client\hud\HudMenu.cpp" />
+    <ClCompile Include="roguezombie\client\hud\InteractionMenu.cpp" />
+    <ClCompile Include="roguezombie\client\hud\Inventory.cpp" />
+    <ClCompile Include="roguezombie\client\hud\InventoryEquipmentSlot.cpp" />
+    <ClCompile Include="roguezombie\client\hud\InventoryIcon.cpp" />
+    <ClCompile Include="roguezombie\client\hud\InventoryItemLabel.cpp" />
+    <ClCompile Include="roguezombie\client\hud\InventoryLootSlot.cpp" />
+    <ClCompile Include="roguezombie\client\hud\InventoryPositionSlot.cpp" />
+    <ClCompile Include="roguezombie\client\hud\Journal.cpp" />
+    <ClCompile Include="roguezombie\client\hud\LootMenu.cpp" />
+    <ClCompile Include="roguezombie\client\hud\Minimap.cpp" />
+    <ClCompile Include="roguezombie\client\hud\Options.cpp" />
+    <ClCompile Include="roguezombie\client\hud\OptionsBar.cpp" />
+    <ClCompile Include="roguezombie\client\hud\StatBubble.cpp" />
+    <ClCompile Include="roguezombie\client\hud\Tooltip.cpp" />
+    <ClCompile Include="roguezombie\client\hud\TurnQueue.cpp" />
+    <ClCompile Include="roguezombie\client\items\ItemClient.cpp" />
+    <ClCompile Include="roguezombie\client\LevelClient.cpp" />
+    <ClCompile Include="roguezombie\client\menus\ErrorMenu.cpp" />
+    <ClCompile Include="roguezombie\client\menus\JoiningMenu.cpp" />
+    <ClCompile Include="roguezombie\client\menus\StartMainMenu.cpp" />
+    <ClCompile Include="roguezombie\client\menus\StateMenu.cpp" />
+    <ClCompile Include="roguezombie\client\mission\MissionClient.cpp" />
+    <ClCompile Include="roguezombie\client\MoveMarker.cpp" />
+    <ClCompile Include="roguezombie\client\RogueZombieGame.cpp" />
+    <ClCompile Include="roguezombie\client\RZConfig.cpp" />
+    <ClCompile Include="roguezombie\client\StateGameError.cpp" />
+    <ClCompile Include="roguezombie\client\StateGamePlay.cpp" />
+    <ClCompile Include="roguezombie\client\StateGameStart.cpp" />
+    <ClCompile Include="roguezombie\client\StructureClient.cpp" />
+    <ClCompile Include="roguezombie\client\structures\ChestClient.cpp" />
+    <ClCompile Include="roguezombie\client\structures\DoorClient.cpp" />
+    <ClCompile Include="roguezombie\client\structures\WallClient.cpp" />
+    <ClCompile Include="roguezombie\client\TileClient.cpp" />
+    <ClCompile Include="roguezombie\main.cpp" />
+    <ClCompile Include="roguezombie\ResourcePath.cpp" />
+    <ClCompile Include="roguezombie\server\AiRoutines.cpp" />
+    <ClCompile Include="roguezombie\server\Body.cpp" />
+    <ClCompile Include="roguezombie\server\Character.cpp" />
+    <ClCompile Include="roguezombie\server\characters\Hunter.cpp" />
+    <ClCompile Include="roguezombie\server\characters\Ogre.cpp" />
+    <ClCompile Include="roguezombie\server\characters\Zombie.cpp" />
+    <ClCompile Include="roguezombie\server\Command.cpp" />
+    <ClCompile Include="roguezombie\server\dialog\Dialog.cpp" />
+    <ClCompile Include="roguezombie\server\dialog\DialogEntry.cpp" />
+    <ClCompile Include="roguezombie\server\dialog\DialogNode.cpp" />
+    <ClCompile Include="roguezombie\server\dialog\DialogResponse.cpp" />
+    <ClCompile Include="roguezombie\server\GameplayServer.cpp" />
+    <ClCompile Include="roguezombie\server\Interaction.cpp" />
+    <ClCompile Include="roguezombie\server\items\Item.cpp" />
+    <ClCompile Include="roguezombie\server\Level.cpp" />
+    <ClCompile Include="roguezombie\server\LevelLoader.cpp" />
+    <ClCompile Include="roguezombie\server\LevelRunnable.cpp" />
+    <ClCompile Include="roguezombie\server\levels\Interior.cpp" />
+    <ClCompile Include="roguezombie\server\Light.cpp" />
+    <ClCompile Include="roguezombie\server\lights\Flare.cpp" />
+    <ClCompile Include="roguezombie\server\mission\JournalEntry.cpp" />
+    <ClCompile Include="roguezombie\server\mission\Mission.cpp" />
+    <ClCompile Include="roguezombie\server\Player.cpp" />
+    <ClCompile Include="roguezombie\server\RogueZombieServer.cpp" />
+    <ClCompile Include="roguezombie\server\RpgSystem.cpp" />
+    <ClCompile Include="roguezombie\server\StateServerPlay.cpp" />
+    <ClCompile Include="roguezombie\server\Structure.cpp" />
+    <ClCompile Include="roguezombie\server\structures\Chest.cpp" />
+    <ClCompile Include="roguezombie\server\structures\Door.cpp" />
+    <ClCompile Include="roguezombie\server\structures\Wall.cpp" />
+    <ClCompile Include="roguezombie\server\Tile.cpp" />
+    <ClCompile Include="roguezombie\xogeni\LevelGenerator\Cell.cpp" />
+    <ClCompile Include="roguezombie\xogeni\LevelGenerator\CellMap.cpp" />
+    <ClCompile Include="roguezombie\xogeni\LevelGenerator\Entrance.cpp" />
+    <ClCompile Include="roguezombie\xogeni\LevelGenerator\Exit.cpp" />
+    <ClCompile Include="roguezombie\xogeni\LevelGenerator\LevelGenerator.cpp" />
+    <ClCompile Include="roguezombie\xogeni\LevelGenerator\Room.cpp" />
+    <ClCompile Include="roguezombie\xogeni\LevelGenerator\RoomDoor.cpp" />
+    <ClCompile Include="roguezombie\xogeni\XoGeniGame.cpp" />
+    <ClCompile Include="roguezombie\xogeni\XoGeniStateStart.cpp" />
+    <ClCompile Include="roguezombie\xogeni\XoLevelRenderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="roguezombie\content\Agency.ttf" />
+    <Font Include="roguezombie\content\ascsys.ttf" />
+    <Font Include="roguezombie\content\Audimat.ttf" />
+    <Font Include="roguezombie\content\homespun.ttf" />
+    <Font Include="roguezombie\content\OCRAEXT.TTF" />
+    <Font Include="roguezombie\content\VeraMono.ttf" />
+    <Font Include="roguezombie\content\xogeni\Agency.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="roguezombie\content\bit_chestclose_01.ogg" />
+    <None Include="roguezombie\content\bit_chestopen_01.ogg" />
+    <None Include="roguezombie\content\bit_click_01.ogg" />
+    <None Include="roguezombie\content\bit_deathgrunt_01.ogg" />
+    <None Include="roguezombie\content\bit_explosion01.ogg" />
+    <None Include="roguezombie\content\bit_guts_01.ogg" />
+    <None Include="roguezombie\content\bit_guts_02.ogg" />
+    <None Include="roguezombie\content\bit_heal_01.ogg" />
+    <None Include="roguezombie\content\bit_menu_01.ogg" />
+    <None Include="roguezombie\content\bit_pistol_01.ogg" />
+    <None Include="roguezombie\content\bit_rifle_01.ogg" />
+    <None Include="roguezombie\content\bit_song_heartbeat.ogg" />
+    <None Include="roguezombie\content\bit_thud_01.ogg" />
+    <None Include="roguezombie\content\Illuminate.frag" />
+    <None Include="roguezombie\content\interface_01.csv" />
+    <None Include="roguezombie\content\Outline.frag" />
+    <None Include="roguezombie\content\RockmenCombat.ogg" />
+    <None Include="roguezombie\content\RockmenExplore.ogg" />
+    <None Include="roguezombie\content\spritesheet_01.csv" />
+    <None Include="roguezombie\content\xogeni\spritesheet.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="roguezombie\content\ctrlz.png" />
+    <Image Include="roguezombie\content\ctrlz3d.png" />
+    <Image Include="roguezombie\content\ctrlziso.png" />
+    <Image Include="roguezombie\content\ctrlzisosq.png" />
+    <Image Include="roguezombie\content\interface_01.png" />
+    <Image Include="roguezombie\content\minititle.png" />
+    <Image Include="roguezombie\content\mouse.png" />
+    <Image Include="roguezombie\content\options_checkbox_checked.png" />
+    <Image Include="roguezombie\content\options_checkbox_unchecked.png" />
+    <Image Include="roguezombie\content\options_sliderbg.png" />
+    <Image Include="roguezombie\content\options_sliderhandle.png" />
+    <Image Include="roguezombie\content\SliderBackground.png" />
+    <Image Include="roguezombie\content\SliderHandle.png" />
+    <Image Include="roguezombie\content\spritesheet_01.png" />
+    <Image Include="roguezombie\content\title.png" />
+    <Image Include="roguezombie\content\xogeni\mouse.png" />
+    <Image Include="roguezombie\content\xogeni\spritesheet.png" />
+    <Image Include="roguezombie\content\ZRLiso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="roguezombie\content\Demo.xml" />
+    <Xml Include="roguezombie\content\HunterAI.xml" />
+    <Xml Include="roguezombie\content\RZ2.xml" />
+    <Xml Include="roguezombie\content\Test.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
