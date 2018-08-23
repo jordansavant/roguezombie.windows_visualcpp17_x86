@@ -69,7 +69,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildBeforeTargets>Run</CustomBuildBeforeTargets>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -85,6 +87,9 @@
     <PostBuildEvent>
       <Command>XCOPY "$(SolutionDir)roguezombie.windows_visualcpp17_x86\roguezombie\content" "$(TargetDir)content\" /S /Y</Command>
     </PostBuildEvent>
+    <CustomBuildStep>
+      <Command>XCOPY "$(SolutionDir)roguezombie.windows_visualcpp17_x86\roguezombie\content" "$(TargetDir)content\" /S /Y</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -239,14 +244,17 @@
     <ClInclude Include="roguezombie\client\StructureClient.hpp" />
     <ClInclude Include="roguezombie\client\structures\ChestClient.hpp" />
     <ClInclude Include="roguezombie\client\structures\DoorClient.hpp" />
+    <ClInclude Include="roguezombie\client\structures\FurnishingClient.hpp" />
     <ClInclude Include="roguezombie\client\structures\WallClient.hpp" />
     <ClInclude Include="roguezombie\client\TileClient.hpp" />
     <ClInclude Include="roguezombie\ResourcePath.h" />
     <ClInclude Include="roguezombie\server\AiRoutines.hpp" />
     <ClInclude Include="roguezombie\server\Body.hpp" />
     <ClInclude Include="roguezombie\server\Character.hpp" />
+    <ClInclude Include="roguezombie\server\characters\Guard.hpp" />
     <ClInclude Include="roguezombie\server\characters\Hunter.hpp" />
     <ClInclude Include="roguezombie\server\characters\Ogre.hpp" />
+    <ClInclude Include="roguezombie\server\characters\Scientist.hpp" />
     <ClInclude Include="roguezombie\server\characters\Zombie.hpp" />
     <ClInclude Include="roguezombie\server\ClientRequest.hpp" />
     <ClInclude Include="roguezombie\server\Command.hpp" />
@@ -276,6 +284,7 @@
     <ClInclude Include="roguezombie\server\Structure.hpp" />
     <ClInclude Include="roguezombie\server\structures\Chest.hpp" />
     <ClInclude Include="roguezombie\server\structures\Door.hpp" />
+    <ClInclude Include="roguezombie\server\structures\Furnishing.hpp" />
     <ClInclude Include="roguezombie\server\structures\Wall.hpp" />
     <ClInclude Include="roguezombie\server\Tile.hpp" />
     <ClInclude Include="roguezombie\xogeni\LevelGenerator\Cell.hpp" />
@@ -387,6 +396,7 @@
     <ClCompile Include="roguezombie\client\StructureClient.cpp" />
     <ClCompile Include="roguezombie\client\structures\ChestClient.cpp" />
     <ClCompile Include="roguezombie\client\structures\DoorClient.cpp" />
+    <ClCompile Include="roguezombie\client\structures\FurnishingClient.cpp" />
     <ClCompile Include="roguezombie\client\structures\WallClient.cpp" />
     <ClCompile Include="roguezombie\client\TileClient.cpp" />
     <ClCompile Include="roguezombie\main.cpp" />
@@ -396,6 +406,8 @@
     <ClCompile Include="roguezombie\server\Character.cpp" />
     <ClCompile Include="roguezombie\server\characters\Hunter.cpp" />
     <ClCompile Include="roguezombie\server\characters\Ogre.cpp" />
+    <ClCompile Include="roguezombie\server\characters\Scientist.cpp" />
+    <ClCompile Include="roguezombie\server\characters\Guard.cpp" />
     <ClCompile Include="roguezombie\server\characters\Zombie.cpp" />
     <ClCompile Include="roguezombie\server\Command.cpp" />
     <ClCompile Include="roguezombie\server\dialog\Dialog.cpp" />
@@ -420,6 +432,7 @@
     <ClCompile Include="roguezombie\server\Structure.cpp" />
     <ClCompile Include="roguezombie\server\structures\Chest.cpp" />
     <ClCompile Include="roguezombie\server\structures\Door.cpp" />
+    <ClCompile Include="roguezombie\server\structures\Furnishing.cpp" />
     <ClCompile Include="roguezombie\server\structures\Wall.cpp" />
     <ClCompile Include="roguezombie\server\Tile.cpp" />
     <ClCompile Include="roguezombie\xogeni\LevelGenerator\Cell.cpp" />
@@ -443,6 +456,7 @@
     <Font Include="roguezombie\content\xogeni\Agency.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\roguezombie-assets\Assets\Graphics\spritesheet_01.csv" />
     <None Include="roguezombie\content\bit_chestclose_01.ogg" />
     <None Include="roguezombie\content\bit_chestopen_01.ogg" />
     <None Include="roguezombie\content\bit_click_01.ogg" />
@@ -465,6 +479,7 @@
     <None Include="roguezombie\content\xogeni\spritesheet.csv" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\roguezombie-assets\Assets\Graphics\spritesheet_01.png" />
     <Image Include="roguezombie\content\ctrlz.png" />
     <Image Include="roguezombie\content\ctrlz3d.png" />
     <Image Include="roguezombie\content\ctrlziso.png" />

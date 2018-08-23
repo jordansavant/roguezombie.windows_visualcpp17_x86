@@ -510,6 +510,18 @@
     <ClInclude Include="roguezombie\ResourcePath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="roguezombie\server\characters\Scientist.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="roguezombie\client\structures\FurnishingClient.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="roguezombie\server\structures\Furnishing.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="roguezombie\server\characters\Guard.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="roguezombie\bitengine\Audio\MusicManager.cpp">
@@ -938,6 +950,18 @@
     <ClCompile Include="roguezombie\ResourcePath.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="roguezombie\server\characters\Scientist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="roguezombie\client\structures\FurnishingClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="roguezombie\server\structures\Furnishing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="roguezombie\server\characters\Guard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Font Include="roguezombie\content\Agency.ttf" />
@@ -969,6 +993,7 @@
     <None Include="roguezombie\content\RockmenExplore.ogg" />
     <None Include="roguezombie\content\spritesheet_01.csv" />
     <None Include="roguezombie\content\xogeni\spritesheet.csv" />
+    <None Include="..\..\roguezombie-assets\Assets\Graphics\spritesheet_01.csv" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="roguezombie\content\ctrlz.png">
@@ -1023,6 +1048,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="roguezombie\content\xogeni\mouse.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\roguezombie-assets\Assets\Graphics\spritesheet_01.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
