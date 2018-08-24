@@ -522,6 +522,9 @@
     <ClInclude Include="roguezombie\server\characters\Guard.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="roguezombie\server\AccessLevel.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="roguezombie\bitengine\Audio\MusicManager.cpp">

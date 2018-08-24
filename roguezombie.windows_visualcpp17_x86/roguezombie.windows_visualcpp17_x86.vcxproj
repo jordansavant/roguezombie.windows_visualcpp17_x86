@@ -248,6 +248,7 @@
     <ClInclude Include="roguezombie\client\structures\WallClient.hpp" />
     <ClInclude Include="roguezombie\client\TileClient.hpp" />
     <ClInclude Include="roguezombie\ResourcePath.h" />
+    <ClInclude Include="roguezombie\server\AccessLevel.hpp" />
     <ClInclude Include="roguezombie\server\AiRoutines.hpp" />
     <ClInclude Include="roguezombie\server\Body.hpp" />
     <ClInclude Include="roguezombie\server\Character.hpp" />
