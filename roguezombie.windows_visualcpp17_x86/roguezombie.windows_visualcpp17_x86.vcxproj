@@ -168,6 +168,7 @@
     <ClInclude Include="roguezombie\bitengine\Input\InputBinding.hpp" />
     <ClInclude Include="roguezombie\bitengine\Input\InputBindingVector.hpp" />
     <ClInclude Include="roguezombie\bitengine\Input\InputManager.hpp" />
+    <ClInclude Include="roguezombie\bitengine\Input\InputTextListener.hpp" />
     <ClInclude Include="roguezombie\bitengine\Input\XinputGamepad.hpp" />
     <ClInclude Include="roguezombie\bitengine\Intelligence.hpp" />
     <ClInclude Include="roguezombie\bitengine\Intelligence\Astar.hpp" />
@@ -207,6 +208,7 @@
     <ClInclude Include="roguezombie\client\hud\ActionBar.hpp" />
     <ClInclude Include="roguezombie\client\hud\ActionBarSlot.hpp" />
     <ClInclude Include="roguezombie\client\hud\Console.hpp" />
+    <ClInclude Include="roguezombie\client\hud\DevTerminal.hpp" />
     <ClInclude Include="roguezombie\client\hud\DialogMenu.hpp" />
     <ClInclude Include="roguezombie\client\hud\Frame.hpp" />
     <ClInclude Include="roguezombie\client\hud\Hud.hpp" />
@@ -335,6 +337,7 @@
     <ClCompile Include="roguezombie\bitengine\Input\InputBinding.cpp" />
     <ClCompile Include="roguezombie\bitengine\Input\InputBindingVector.cpp" />
     <ClCompile Include="roguezombie\bitengine\Input\InputManager.cpp" />
+    <ClCompile Include="roguezombie\bitengine\Input\InputTextListener.cpp" />
     <ClCompile Include="roguezombie\bitengine\Input\XinputGamepad.cpp" />
     <ClCompile Include="roguezombie\bitengine\Intelligence\Astar.cpp" />
     <ClCompile Include="roguezombie\bitengine\Intelligence\AstarNode.cpp" />
@@ -361,6 +364,7 @@
     <ClCompile Include="roguezombie\client\hud\ActionBar.cpp" />
     <ClCompile Include="roguezombie\client\hud\ActionBarSlot.cpp" />
     <ClCompile Include="roguezombie\client\hud\Console.cpp" />
+    <ClCompile Include="roguezombie\client\hud\DevTerminal.cpp" />
     <ClCompile Include="roguezombie\client\hud\DialogMenu.cpp" />
     <ClCompile Include="roguezombie\client\hud\Frame.cpp" />
     <ClCompile Include="roguezombie\client\hud\Hud.cpp" />

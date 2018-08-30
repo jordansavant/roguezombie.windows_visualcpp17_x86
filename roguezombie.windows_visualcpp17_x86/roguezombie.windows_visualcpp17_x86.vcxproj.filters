@@ -525,6 +525,12 @@
     <ClInclude Include="roguezombie\server\AccessLevel.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="roguezombie\client\hud\DevTerminal.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="roguezombie\bitengine\Input\InputTextListener.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="roguezombie\bitengine\Audio\MusicManager.cpp">
@@ -963,6 +969,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="roguezombie\server\characters\Guard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="roguezombie\client\hud\DevTerminal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="roguezombie\bitengine\Input\InputTextListener.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
